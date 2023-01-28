@@ -15,7 +15,11 @@ export const Reducer=(state=intstate, {type,payload}:reducerAction):intstateType
       switch(type){
         case types.GET_USER_DATA_LOADING:return {...state,isLoading:true, isError:false }
 
-        case types.GET_USER_DATA_SUCCESS:return {...state,isLoading:false, isError:false ,homePageData:payload}
+        case types.GET_USER_DATA_SUCCESS:
+         
+       // console.log(state.homePageData,"HM")
+        
+        return {...state,isLoading:false, isError:false ,homePageData:payload}
 
         case types.GET_USER_DATA_ERROR:return {...state, isLoading:false ,isError:true}
         
