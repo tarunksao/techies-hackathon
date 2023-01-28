@@ -23,6 +23,7 @@ type HomePagearrType = {
 
    }
 }
+export default HomePagearrType
 
 
 export type reducerAction={
