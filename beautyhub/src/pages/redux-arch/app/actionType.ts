@@ -1,0 +1,7 @@
+
+
+
+export const GET_USER_DATA_LOADING:string="USER/DATA/LOADING"
+export const GET_USER_DATA_SUCCESS:string="USER/DATA/SUCCESS"
+export const GET_USER_DATA_ERROR:string='USER/DATA/ERROR'
+
