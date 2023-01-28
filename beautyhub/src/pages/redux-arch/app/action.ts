@@ -8,11 +8,11 @@ import  getProductapi  from "./product.api"
 
 
 
-const getProduct=async(dispatch:AppDispatch)=>{
+const getProduct=()=>async(dispatch:AppDispatch)=>{
   dispatch({type:types.GET_USER_DATA_LOADING,payload:null})
     try{
 let data=await getProductapi()
-console.log(data,'dataaa')
+//console.log(data,'dataaa')
 dispatch({type:types.GET_USER_DATA_SUCCESS,payload:data})
     }
     catch(err){
