@@ -24,7 +24,7 @@
 # 👨🏻 **Tarun Kumar Sao**
 - Github: [@tarunksao](https://github.com/tarunksao)
 
-# 👩🏼 **Aarif Khan**
+# 🧑🏻 **Aarif Khan**
 - Github: [@AariF-ShazZ](https://github.com/AariF-ShazZ)
 
 # 🧑🏻 **Manmohan Singh Jha**
