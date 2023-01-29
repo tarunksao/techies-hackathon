@@ -9,8 +9,11 @@ import axios ,{AxiosResponse} from "axios"
 //     let response:AxiosResponse<HomePagearrType[]>=await axios.get('https://youtube.googleapis.com/youtube/v3/search?q=beauty&part=snippet&maxResults=20&key=AIzaSyBoSLMZ1EA-pYQ4sQRszn-TZZeAjG0F2Wg')
 // return response.data
 return  axios.get('https://youtube.googleapis.com/youtube/v3/search?q=makeup&regionCode=IN&part=snippet&maxResults=20&key=AIzaSyCxvMP-XKDa3PTEv5eN3EcxEtAmLrDqFsM').then((res)=>res.data.items)
+}
 
-
+export const getSingleProd=(id:string)=>{
+    console.log(id)
+    return axios.get(`https://www.youtube.com/embed/${id}`).then((res)=>res.data)
 }
 
 export default getProductapi
