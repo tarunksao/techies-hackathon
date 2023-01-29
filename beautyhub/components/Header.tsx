@@ -1,6 +1,5 @@
 import React from 'react';
 import {Box, Button, Flex, Heading, Image} from '@chakra-ui/react';
-import CustomImage from './CustomInage';
 import Link from 'next/link';
 import Register from './Register';
 import Login from './Login';

@@ -6,7 +6,7 @@ export type intstateType = {
     homePageData:HomePagearrType[]|[]
 }
 
-type HomePagearrType = {
+export type HomePagearrType = {
    id:{
     kind:string;
     vidioId:string;
@@ -14,10 +14,9 @@ type HomePagearrType = {
    snippet:{
     description:string;
     thumbnails:{
-
         high:number;
         url:string;
-        widht:number;
+        width:number;
     },
     title:string;
 
