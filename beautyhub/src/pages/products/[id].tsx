@@ -1,22 +1,28 @@
 import axios from "axios";
 import { GetServerSideProps, GetStaticPaths, GetStaticProps } from "next"
-import HomePagearrType from "../constants/constant";
-import { getSingleProd } from "../redux-arch/app/product.api"
+import { Product } from "model/product.model";
 
 type productDetailProps={
-    product:HomePagearrType;
+    product:Product;
 }
 
-export default function VidioPlay({product}:{product:any}){
+export default function VidioPlay({product}:{product:Product}){
  
-    console.log(product,"product")
+    // console.log(product,"product")
     
-    return <div style={{"fontSize":"xl", "margin":"100px"}} >vidioIddsafdf
-    
-    <div>
-    <iframe width="1536" height="727" src={`https://www.youtube.com/embed/${product}`} title="4 SATISFYING VIDEO MAKEUP TUTORIAL | Best Makeup Transformation | Makeup Inspiration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-
+    return <div style={{"margin":"120px 100px"}} >
+      <div style={{margin:'auto'}}>
+        <iframe
+         width="1300" 
+         height="500" 
+         src={`https://www.youtube.com/embed/${product}`} 
+         title="4 SATISFYING VIDEO MAKEUP TUTORIAL | Best Makeup Transformation | Makeup Inspiration" 
+         frameBorder="0" 
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+         allowFullScreen
+         ></iframe>
+      </div>
+      <p>Powered by Youtube</p>
     </div>
     
 }
