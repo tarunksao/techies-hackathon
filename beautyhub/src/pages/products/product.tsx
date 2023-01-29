@@ -3,7 +3,7 @@ import { Grid, GridItem,Box, Image, Text } from "@chakra-ui/react"
 
 export default function ProductDetails({data}){
 
-   console.log(data,"dfsaft")
+  //  console.log(data,"dfsaft")
 
     return<>
     <h3>product pages</h3>

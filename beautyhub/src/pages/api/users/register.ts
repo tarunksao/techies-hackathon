@@ -1,8 +1,10 @@
-import connect from "../../../../lib/mongodb"
-import {UserModel} from "../../../../model/Schema"
+import connect from "lib/mongodb"
+import UserModel from "model/Schema"
+import { NextApiRequest, NextApiResponse } from "next";
+
 connect()
 
- const register = async (req,res) => {
+ const register = async (req:NextApiRequest,res:NextApiResponse) => {
     try{
         const user =  new UserModel(req.body)
         await user.save()

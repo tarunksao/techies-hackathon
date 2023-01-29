@@ -13,6 +13,6 @@ export interface UserType {
     password:string;
 }
 
-const UserModel:UserType = mongoose.models.user ||  mongoose.model("user",userSchema)
+const UserModel = mongoose.models.user ||  mongoose.model("user",userSchema)
 
-module.exports = {UserModel}
+export default UserModel;
