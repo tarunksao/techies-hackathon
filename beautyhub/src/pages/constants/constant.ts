@@ -1,7 +1,9 @@
+import { Product } from "model/product.model";
+
 export type intstateType = {
   isLoading: boolean;
   isError: boolean;
-  homePageData: HomePagearrType[] | [];
+  homePageData: Product[] | [];
 };
 
 export type HomePagearrType = {

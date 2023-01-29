@@ -14,14 +14,13 @@ const ProductPage=()=>{
     dispatch(getProduct());    
   },[])
     
-   
-
-    return <>
-    <h1>all vidios</h1>
+  return <>
+    <div style={{padding:'120px 0px', backgroundColor:'#ffdb99'}}>
       {
-        loading?<h2>...loading</h2>:<ProductDetails data={product} />
+        loading?<h2 style={{textAlign:'center'}}>...loading</h2>:<ProductDetails data={product} />
       }
-    </>
+    </div>
+  </>
 }
 
 export default ProductPage

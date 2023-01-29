@@ -1,4 +1,4 @@
-import { Grid, GridItem, Box, Image, Text } from "@chakra-ui/react"
+import { Grid, Box, Image, Text } from "@chakra-ui/react"
 import { Product } from "model/product.model"
 import Link from "next/link"
 
@@ -10,11 +10,9 @@ export default function ProductDetails({data}:ProductType){
 
   //  console.log(data[0].id.videoId,"datfdgfgaa")
 
-  return(<>
-    <h3>product pages</h3>
+  return(
     <Grid templateColumns={'repeat(4,1fr)'} gap={6} p={"50px"} m='auto' >
-    {
-     data.map((elm:Product)=>(
+    {data.map((elm:Product)=>(
       <Box key={elm._id}>
           <Link href={`products/${elm.videoId}`} >
             <Box _hover={{"cursor":"pointer","padding":"10px"}}>
@@ -24,8 +22,7 @@ export default function ProductDetails({data}:ProductType){
             </Box>
           </Link>
        </Box>
-     ))
-    }
+     ))}
     </Grid>
-  </>)
+  )
 }
