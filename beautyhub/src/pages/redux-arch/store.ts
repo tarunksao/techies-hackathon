@@ -1,10 +1,11 @@
 import { applyMiddleware, legacy_createStore } from "redux";
 
 import { Reducer as appreducer } from "./app/reducer";
+import { userReducer } from "./users/users.reducer";
 import { combineReducers } from "redux";
 import thunk from "redux-thunk";
 import {useDispatch, TypedUseSelectorHook,useSelector}from "react-redux"
-const rootreducer=combineReducers({appreducer})
+const rootreducer=combineReducers({appreducer, users:userReducer});
 
  type RootState=ReturnType<typeof store.getState> 
 export default RootState
