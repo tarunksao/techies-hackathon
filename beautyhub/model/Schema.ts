@@ -6,13 +6,14 @@ const userSchema = new mongoose.Schema({
     email:{type:String,required:true,unique:true},
     password:{type:String,required:true}
 })
+
 export interface UserType {
     name:string;
     age:number;
     email:string;
     password:string;
 }
+                                                 
+const UserModel = mongoose.models.user ||  mongoose.model("user",userSchema)
 
-const UserModel:UserType = mongoose.models.user ||  mongoose.model("user",userSchema)
-
-module.exports = {UserModel}
+export default UserModel;
