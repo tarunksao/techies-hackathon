@@ -1,7 +1,7 @@
 # _BeautyHub_
 
 
-**A user can learn Make Up Aristry**
+**A user can learn Make Up Aristry at their own pace, anytime, anywhere. No need to search for classes or attend webinars**
 
 ## Build with
 
