@@ -8,7 +8,7 @@ import  getProduct  from "../redux-arch/app/action"
 import * as types from "../redux-arch/app/actionType"
 import  getProductapi  from "../redux-arch/app/product.api"
 import  RootState, { useAppDispatch, useAppSelector }  from "../redux-arch/store"
-import ProductDetails from "./product"
+import ProductDetails from "../../../components/product"
 const ProductPage=()=>{
 const dispatch=useAppDispatch()
 const product=useAppSelector((store)=>store.appreducer.homePageData)    
@@ -22,9 +22,9 @@ react.useEffect(()=>{
   dispatch(getProduct())
       
         
-    },[dispatch])
+    },[])
     
-    console.log(loading)
+   
 
     return <>
     <h1>all vidios</h1>
