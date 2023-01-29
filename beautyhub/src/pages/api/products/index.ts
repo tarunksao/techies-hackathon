@@ -1,6 +1,6 @@
 import connect from "lib/mongodb";
 import ProductModel, { Product } from "model/product.model";
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextApiRequest, NextApiResponse } from "next"; 
 
 const handler = async (req:NextApiRequest,res:NextApiResponse) => {
     const {method} = req;
