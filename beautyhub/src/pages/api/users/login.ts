@@ -1,10 +1,11 @@
 import connect from "../../lib/mongodb"
 import {UserModel} from "../../model/Schema"
-connect()
+import { NextApiRequest, NextApiResponse } from "next"
 
-export default async function handler(req,res){
+export default async function handler(req:NextApiRequest,res:NextApiResponse){
 
        const {email,password} = req.body
+       await connect()
        const user =await UserModel.findOne({email})
 
        if(!user){
