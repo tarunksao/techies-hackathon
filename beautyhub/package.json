@@ -23,6 +23,7 @@
     "focus-lock": "^0.11.5",
     "framer-motion": "^8.5.4",
     "mongodb": "^4.13.0",
+    "mongoose": "^6.9.0",
     "next": "13.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
