@@ -10,7 +10,7 @@ export default function VidioPlay({product}:{product:Product}){
  
     // console.log(product,"product")
     
-    return <div style={{"margin":"120px 100px"}} >
+    return <div style={{"padding":"120px 100px", backgroundColor:'#ffdb99'}} >
       <div style={{margin:'auto'}}>
         <iframe
          width="1300" 
