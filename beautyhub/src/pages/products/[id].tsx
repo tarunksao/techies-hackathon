@@ -14,7 +14,7 @@ export default function VidioPlay({product}:{product:any}){
     return <div style={{"fontSize":"xl", "margin":"100px"}} >vidioIddsafdf
     
     <div>
-    <iframe width="1536" height="727" src={`https://www.youtube.com/embed/${product}`} title="4 SATISFYING VIDEO MAKEUP TUTORIAL | Best Makeup Transformation | Makeup Inspiration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="200px" height="200px" src={`https://www.youtube.com/embed/${product}`} title="4 SATISFYING VIDEO MAKEUP TUTORIAL | Best Makeup Transformation | Makeup Inspiration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 
     </div>
