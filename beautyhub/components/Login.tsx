@@ -9,26 +9,63 @@ import {
     DrawerOverlay,
     DrawerContent,
     DrawerCloseButton,
+    FormControl,
+    FormLabel,
+    Heading,
     Input,
     useDisclosure,
+    VStack
   } from '@chakra-ui/react'
+
+  const initForm = {
+    email:'',
+    password:''
+  };
 
 export default function Login() {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = React.useRef(null);
+    const [loginForm, setLoginForm] = React.useState(initForm);
+
+    const handleChange = (e:Event) => {
+        e.preventDefault();
+        setLoginForm({...loginForm, [e.target.name]:e.target.value});
+    }
+
+    const handleClick = () => {
+        console.log(loginForm);
+        setLoginForm(initForm);
+    }
+
+    const {email, password} = loginForm;
 
     return (
         <Box>
             <Button ref={btnRef} onClick={onOpen} colorScheme={'yellow'}>Login</Button>
-            <Drawer isOpen={isOpen} onClose={onClose} placement="right">
+            <Drawer isOpen={isOpen} onClose={onClose} placement="right" size='md'>
                 <DrawerOverlay />
                 <DrawerContent>
                     <DrawerCloseButton />
-                    <DrawerHeader>Login</DrawerHeader>
+                    <DrawerHeader>
+                        <Heading textAlign='center' color='#1f0f53'>
+                            Login
+                        </Heading>
+                    </DrawerHeader>
                     <DrawerBody>
-                        <Input type='text' placeholder="Enter Email"/>
-                        <Input type='Password' placeholder="Enter Password"/>
+                        <VStack gap={6}>
+                            <FormControl isRequired>
+                                <FormLabel>Email Address</FormLabel>
+                                <Input focusBorderColor='gold' _placeholder={{color:'pink.500'}} type='text' placeholder="Enter Email Address" name='email' value={email} onChange={(e:Event)=>handleChange(e)} />
+                            </FormControl>
+                            <FormControl isRequired>
+                                <FormLabel>Password</FormLabel>
+                                <Input focusBorderColor='gold' _placeholder={{color:'pink.500'}} type='password' placeholder="Enter Password" name='password' value={password} onChange={(e:Event)=>handleChange(e)} />
+                            </FormControl>
+                        </VStack>
                     </DrawerBody>
+                    <DrawerFooter mb='40px'>
+                        <Button w='full' onClick={handleClick} colorScheme={'yellow'}>Register</Button>
+                    </DrawerFooter>
                 </DrawerContent>
             </Drawer>
         </Box>
