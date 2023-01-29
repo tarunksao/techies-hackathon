@@ -16,19 +16,19 @@ import {
     useDisclosure,
     VStack
   } from '@chakra-ui/react'
+import { HandleChangeEvent } from "@/Utils/types";
 
-  const initForm = {
+const initForm = {
     email:'',
     password:''
-  };
+};
 
 export default function Login() {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = React.useRef(null);
     const [loginForm, setLoginForm] = React.useState(initForm);
 
-    const handleChange = (e:Event) => {
-        e.preventDefault();
+    const handleChange = (e:HandleChangeEvent) => {
         setLoginForm({...loginForm, [e.target.name]:e.target.value});
     }
 
@@ -55,11 +55,11 @@ export default function Login() {
                         <VStack gap={6}>
                             <FormControl isRequired>
                                 <FormLabel>Email Address</FormLabel>
-                                <Input focusBorderColor='gold' _placeholder={{color:'pink.500'}} type='text' placeholder="Enter Email Address" name='email' value={email} onChange={(e:Event)=>handleChange(e)} />
+                                <Input focusBorderColor='gold' _placeholder={{color:'pink.500'}} type='text' placeholder="Enter Email Address" name='email' value={email} onChange={(e:HandleChangeEvent)=>handleChange(e)} />
                             </FormControl>
                             <FormControl isRequired>
                                 <FormLabel>Password</FormLabel>
-                                <Input focusBorderColor='gold' _placeholder={{color:'pink.500'}} type='password' placeholder="Enter Password" name='password' value={password} onChange={(e:Event)=>handleChange(e)} />
+                                <Input focusBorderColor='gold' _placeholder={{color:'pink.500'}} type='password' placeholder="Enter Password" name='password' value={password} onChange={(e:HandleChangeEvent)=>handleChange(e)} />
                             </FormControl>
                         </VStack>
                     </DrawerBody>

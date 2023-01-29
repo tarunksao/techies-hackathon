@@ -4,7 +4,7 @@ export type intstateType = {
   homePageData: HomePagearrType[] | [];
 };
 
-type HomePagearrType = {
+export type HomePagearrType = {
   //    id:{
   //     kind:string;
   //     vidioId:string;
@@ -12,13 +12,11 @@ type HomePagearrType = {
   //    snippet:{
   //     description:string;
   //     thumbnails:{
-
   //         high:number;
   //         url:string;
   //         widht:number;
   //     },
   //     title:string;
-
   //    }
   etag: string;
   id: {
@@ -55,7 +53,6 @@ type HomePagearrType = {
   };
 };
 export default HomePagearrType;
-
 export type reducerAction = {
   type: string;
   payload: any;
