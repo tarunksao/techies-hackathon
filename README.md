@@ -36,3 +36,23 @@
   - Mongoose
   - Chakra-UI
 
+# Glimpse of Our Application
+
+### Home Page
+  - [homePage1](Images/homePage1.png)
+  - [homePage2](Images/homePage2.png)
+
+### Register
+  - [register](Images/register.png)
+
+### Login
+  -[login](Images/login.png)
+
+### All Videos
+  -[allVideos](Images/allVideos.png)
+
+### Single Video
+  -[singleVideo](Images/singleVideo.png)
+
+
+<hr/>
