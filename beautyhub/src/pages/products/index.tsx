@@ -15,6 +15,8 @@ const product=useAppSelector((store)=>store.appreducer.homePageData)
 const loading=useAppSelector((store)=>store.appreducer.isLoading)
 console.log(product,'product')
 
+
+
 react.useEffect(()=>{
         
   dispatch(getProduct())
@@ -22,12 +24,14 @@ react.useEffect(()=>{
         
     },[dispatch])
     
+    console.log(loading)
 
     return <>
     <h1>all vidios</h1>
   
-    <ProductDetails  data={product} />
- 
+    {
+     loading?<h2>...loading</h2>:<ProductDetails  data={product} />
+    }
     
     </>
 }
