@@ -39,20 +39,20 @@
 # Glimpse of Our Application
 
 ### Home Page
-  - [homePage1](Images/homePage1.png)
-  - [homePage2](Images/homePage2.png)
+  ![homePage1](Images/homePage1.png)
+  ![homePage2](Images/homePage2.png)
 
 ### Register
-  - [register](Images/register.png)
+  ![register](Images/register.png)
 
 ### Login
-  -[login](Images/login.png)
+  ![login](Images/login.png)
 
 ### All Videos
-  -[allVideos](Images/allVideos.png)
+  ![allVideos](Images/allVideos.png)
 
 ### Single Video
-  -[singleVideo](Images/singleVideo.png)
+  ![singleVideo](Images/singleVideo.png)
 
 
 <hr/>
