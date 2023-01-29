@@ -1,23 +1,28 @@
-import { Grid, GridItem,Box, Image, Text } from "@chakra-ui/react"
+import { Grid, Box, Image, Text } from "@chakra-ui/react"
+import { Product } from "model/product.model"
 import Link from "next/link"
 
-export default function ProductDetails({data}:any){
+type ProductType = {
+  data:Product[],
+}
+
+export default function ProductDetails({data}:ProductType){
 
   //  console.log(data[0].id.videoId,"datfdgfgaa")
 
-    return<>
-    <h3>product pages</h3>
-   <Grid templateColumns={'repeat(4,1fr)'} gap={6} p={"50px"} m='auto' >
- {
-     data.map((elm:any)=>{
-        return <Box key={elm.etag}>
-        <Link href={`products/${elm.id.videoId}`} > <Box _hover={{"cursor":"pointer","padding":"10px"}} ><Image  src={elm.snippet.thumbnails.high.url}   /></Box></Link>
-        <Text as={'b'} noOfLines={1} >{elm.snippet.title}</Text>
-        <Text>{elm.snippet.channelTitle}</Text>
-        
+  return(
+    <Grid templateColumns={'repeat(4,1fr)'} gap={6} p={"50px"} m='auto' >
+    {data.map((elm:Product)=>(
+      <Box key={elm._id}>
+          <Link href={`products/${elm.videoId}`} >
+            <Box _hover={{"cursor":"pointer","padding":"10px"}}>
+              <Image src={elm.image_src} alt={elm.title} />
+              <Text fontWeight={'semibold'} noOfLines={1} overflow={'hidden'}>{elm.title}</Text>
+              <Text noOfLines={1} overflow={'hidden'}>{elm.desc}</Text>        
+            </Box>
+          </Link>
        </Box>
-        })
- }
-   </Grid>
-    </>
+     ))}
+    </Grid>
+  )
 }
