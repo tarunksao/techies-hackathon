@@ -1,5 +1,5 @@
 import connect from "lib/mongodb"
-import {UserModel} from "model/Schema"
+import UserModel from "model/Schema";
 import { NextApiRequest, NextApiResponse } from "next"
 
  const register = async (req:NextApiRequest,res:NextApiResponse) => {

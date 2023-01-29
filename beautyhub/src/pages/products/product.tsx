@@ -3,8 +3,6 @@ import Link from "next/link"
 
 export default function ProductDetails({data}){
 
-   console.log(data,"datfdgfgaa")
-
     return<>
     <h3>product pages</h3>
    <Grid templateColumns={'repeat(4,1fr)'} gap={6} p={"50px"} m='auto' >
