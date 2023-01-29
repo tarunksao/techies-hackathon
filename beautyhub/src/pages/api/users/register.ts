@@ -1,14 +1,16 @@
-import connect from "lib/mongodb"
-import UserModel from "model/Schema";
-import { NextApiRequest, NextApiResponse } from "next"
+import connect from "../../../../lib/mongodb"
+import {UserModel} from "../../../../model/Schema"
+connect()
 
- const register = async (req:NextApiRequest,res:NextApiResponse) => {
+ const register = async (req,res) => {
     try{
-     await connect()
         const user =  new UserModel(req.body)
         await user.save()
+        // res.send()
         if(!user){
             return res.json({"code":"USER NOT CREATED"})
+        }else{
+            res.send({user})
         }
     }catch(err){
             res.json({
