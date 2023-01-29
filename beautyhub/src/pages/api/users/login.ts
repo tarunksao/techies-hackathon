@@ -11,7 +11,7 @@ export default async function handler(req:NextApiRequest,res:NextApiResponse){
         if(!user){
             return res.json({"code":"Cannot login"})
         }else{
-            res.send({user})
+            return res.send(user)
         }
     } catch(err){
             res.send("Not able to login")

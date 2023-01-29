@@ -17,8 +17,11 @@ import {
     VStack
   } from '@chakra-ui/react';
 import { HandleChangeEvent } from "@/Utils/types";
+import { useAppDispatch } from "@/pages/redux-arch/store";
+import { addUser } from "@/pages/redux-arch/users/users.actions";
+import { UserType } from "model/Schema";
 
-const initForm = {
+const initForm:UserType = {
     name:"",
     email:'',
     password:'',
@@ -29,13 +32,15 @@ export default function Register() {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = React.useRef(null);
     const [registerForm, setRegisterForm] = React.useState(initForm);
+    const dispatch = useAppDispatch();
 
     const handleChange = (e:HandleChangeEvent) => {
         setRegisterForm({...registerForm, [e.target.name]:e.target.value});
     }
 
     const handleClick = () => {
-        console.log(registerForm);
+        // console.log(registerForm);
+        dispatch(addUser(registerForm));
         setRegisterForm(initForm);
     }
 

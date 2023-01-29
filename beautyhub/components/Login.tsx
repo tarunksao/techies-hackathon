@@ -17,6 +17,8 @@ import {
     VStack
   } from '@chakra-ui/react'
 import { HandleChangeEvent } from "@/Utils/types";
+import { useAppDispatch } from "@/pages/redux-arch/store";
+import { loginUser } from "@/pages/redux-arch/users/users.actions";
 
 const initForm = {
     email:'',
@@ -27,13 +29,15 @@ export default function Login() {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = React.useRef(null);
     const [loginForm, setLoginForm] = React.useState(initForm);
+    const dispatch = useAppDispatch();
 
     const handleChange = (e:HandleChangeEvent) => {
         setLoginForm({...loginForm, [e.target.name]:e.target.value});
     }
 
     const handleClick = () => {
-        console.log(loginForm);
+        // console.log(loginForm);
+        dispatch(loginUser(loginForm));
         setLoginForm(initForm);
     }
 
@@ -64,7 +68,7 @@ export default function Login() {
                         </VStack>
                     </DrawerBody>
                     <DrawerFooter mb='40px'>
-                        <Button w='full' onClick={handleClick} colorScheme={'yellow'}>Register</Button>
+                        <Button w='full' onClick={handleClick} colorScheme={'yellow'}>Log In</Button>
                     </DrawerFooter>
                 </DrawerContent>
             </Drawer>
